@@ -1,0 +1,86 @@
+<div class="card" >
+    <form [formGroup] = "userForm">
+        <div class="mt-5">
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">name</label>
+                    </div>
+                    <DIV class="form-row">
+                        <div class="col">
+                            <input type="text" formControlName="name" class="form-comtrol" placeholder="name">
+                        </div>
+                    </DIV>
+
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">address</label>
+                    </div>
+                    <DIV class="Form-row">
+                        <div class="col">
+                            <input type="text" formControlName="address" class="form-comtrol" placeholder="address">
+                        </div>
+                    </DIV>
+
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">contactNo</label>
+                    </div>
+                    <DIV class="Form-row">
+                        <div class="col">
+                            <input type="text" formControlName="contactNo" class="form-comtrol" placeholder="contactNo">
+                        </div>
+                    </DIV>
+
+                </div>
+    
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">gender</label>
+                    </div>
+                    <div class="Form-row">
+                        <div class="col">
+                            <input type="text" formControlName="gender" class="form-comtrol" placeholder="gender">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="from-row">
+                <div class="col-m-6">
+                    <button type="button" class="btn btn-primary" (click)="addItem()">Add</button>&nbsp;
+                   
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-8 mt-4 mb-4">
+        <table class="table table-bordered"></table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>address</th>
+                <th>contactNo</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listData">  
+                <td>
+                    <span>{{item.name}}</span>
+                </td>
+                <td>
+                    <span>{{item.address}}</span>
+                </td>
+                <td>
+                    <span>{{item.contactNo}}</span>
+                </td>
+                <td>
+                    <span>{{item.gender}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </div>
+</div>
